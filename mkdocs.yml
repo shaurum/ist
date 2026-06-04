@@ -1,0 +1,123 @@
+site_name:  СА ПЛК
+site_url: https://manual.saplc.ru/
+
+theme:
+  name: material
+  custom_dir: overrides
+  font: false
+  features:
+    - glightbox
+    - navigation.instant
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+    - content.code.copy 
+  extra_css:
+  - stylesheets/extra.css
+  
+  logo: img/logo_old.svg
+  favicon: img/favicon.svg
+  icon:
+    annotation: material/chevron-right-circle
+    warning: fontawesome/solid/triangle-exclamation
+ 
+  language: ru
+  palette:
+    scheme: default
+    primary: Red
+    accent: grey
+extra_css:
+  - stylesheets/extra.css
+extra:
+  generator: false
+
+
+extra_javascript:
+  - path: https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js
+    type: module
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/gallery.js
+nav:
+ 
+  - Главная: index.md
+  - Общие сведения: basic_nformation.md
+  - Подготовка к работе:
+    - Монтаж и демонтаж: installation.md
+    - Правила сборки: assembly_rules.md
+    - Настройка: 
+      - Начальная настройка контроллера: setup_preparation.md
+      - Навигация по web-интерфейсу: web_interface_navigation.md
+      - Быстрый старт: codesys_integration.md
+  - Продукты:
+    - Основные модули:
+      - Модуль основной SA-P5-GMB: GMB.md
+    - Дискретные модули:
+      - Модуль дискретного ввода SA-P5-DI: DI.md
+      - Модуль дискретного вывода SA-P5-DO: DO.md
+      - Модуль дискретного вывода ШИМ SA-P5-DPWM: DPWM.md
+    - Аналоговые модули:
+      - Модуль аналогового ввода тока SA-P5-AIC: AIC.md
+      - Модуль аналогового ввода напряжения SA-P5-AIV: AIV.md
+      - Модуль аналогового ввода термопары SA-P5-AITC: AITC.md
+      - Модуль аналогового ввода термосопротивления SA-P5-AITR: AITR.md
+      - Модуль аналогового вывода SA-P5-AO: AO.md
+    - Интерфейсные модули:
+      - Модуль интерфейсный RS-485/422 SA-P5-IF485/422: IF485_422.md
+      - Модуль интерфейсный IFHART SA-P5-IFHART: IFHART.md
+
+
+    - Панель оператора:
+      - Панель оператора D13 SA-HMI-D13: D13.md
+    - Специальные модули:
+      - Модуль ввода питания SA-P5-SPPM: SPPM.md
+      - Модуль оконечный SA-P5-SPTM: SPTM.md
+      - Модуль счета импульсов SA-P5-SPPC: SPPC.md
+      - Модуль подключения инкрементальных энкодеров SA-P5-SPIE: SPIE.md
+      - Модуль измерения частоты SA-P5-SPFM: SPFM.md
+      - Модуль расширения коммутации SA-P5-SPSE: SPSE.md
+      - Модуль оконечный SFP SA-P5-SPSFP: SPSFP.md
+      - Модуль управления драйвером шагового двигателя SA-P5-SPSMD: SPSMD.md
+        
+
+        
+        
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
+  - tables
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - abbr
+  - pymdownx.arithmatex:
+     generic: true
+
+plugins:
+ - search
+ - blog:
+     authors_file: .authors.yml
+ - tags:
+      tags_file: tags.md
+ - offline
+
+ 
+
+
+ 
